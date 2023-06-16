@@ -24,5 +24,17 @@
    <nature>solitary</nature>
    <permissions/>
   </behaviorContent>
+  <behaviorContent path="dialog1">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="dialog2">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="dialog3">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
  </contents>
 </package>

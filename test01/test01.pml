@@ -5,12 +5,19 @@
         <BehaviorDescription name="behavior" src="main" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="move" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="zimu" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="dialog1" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="dialog2" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="dialog3" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
         <File name="pepper1" src="html/pepper1.mp4" />
         <File name="pepper2" src="html/pepper2.mp4" />
         <File name="pepper3" src="html/pepper3.mp4" />
+        <File name="ask" src="html/ask1.mp4" />
+        <File name="ask2" src="html/ask2.mp4" />
+        <File name="ask3" src="html/ask3.mp4" />
+        <File name="pic" src="html/pic.png" />
     </Resources>
     <Topics />
     <IgnoredPaths />
