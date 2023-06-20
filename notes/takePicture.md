@@ -6,9 +6,15 @@
 
 > https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L4
 
-后面给`self`添加了多个成员变量：`resolutionMap`, `cameraMap` , `recordFolder`等等：
+后面给`self`添加了多个成员变量：`resolutionMap`（分辨率）, `cameraMap` （哪个摄像头）, `recordFolder`等等：
 
 > https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L7-L16
+
+这里`Map`就是可选项，box的参数来确定：
+
+> https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L42-L44
+
+
 
 用的还是绝对路径，没有替代符号
 
@@ -28,14 +34,18 @@
 
 > https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L39-L40
 
-这个`Map`就是可选项，box的参数来确定：
-
-> https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L42-L44
-
 `logger` `time`这些似乎是系统的，不是很理解怎么得到的：
 
 https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L47-L48
 
 最后是设置`photoCapture`的参数，然后`takePicture`：
 
-https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L49-L54
+> https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L49-L54
+
+这个函数它必须是路径和文件名分开两个参数传入，而且也是绝对路径，不能有特殊符号`.`和`~`，在命令行用`qicli`时也差不多：
+
+```shell
+qicli call ALPhotoCapture.takePicture "/home/nao/" "test.jpg"
+```
+
+如果是相对路径，，，实话说你都不知道工作目录到底在哪里
