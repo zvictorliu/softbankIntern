@@ -3,7 +3,7 @@ class MyClass(GeneratedClass):
         GeneratedClass.__init__(self, False)
 
     def onLoad(self):
-        self.timeFilteredResult = [];
+        self.timeFilteredResult = []
 
     def onUnload(self):
         #puts code for box cleanup here
