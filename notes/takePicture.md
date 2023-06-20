@@ -6,6 +6,10 @@
 
 > https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L4
 
+应该是Choregraphe预置的一个类，myclass继承自这个，所以能够用logger这些：
+
+> https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L47-L48
+
 后面给`self`添加了多个成员变量：`resolutionMap`（分辨率）, `cameraMap` （哪个摄像头）, `recordFolder`等等：
 
 > https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L7-L16
@@ -34,9 +38,7 @@
 
 > https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L39-L40
 
-`logger` `time`这些似乎是系统的，不是很理解怎么得到的：
 
-https://github.com/zvictorliu/softbankIntern/blob/5c2846954d6fbc6cd97b528ac7b7ae4cd85807fc/src/takePicture.py#L47-L48
 
 最后是设置`photoCapture`的参数，然后`takePicture`：
 
