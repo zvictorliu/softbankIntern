@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- encoding: UTF-8 -*-
 
-"""Example: Use showWebview Method"""
+"""Example: Use showImage Method"""
 
 import qi
 import argparse
@@ -11,7 +11,7 @@ import time
 
 def main(session):
     """
-    This example uses the showWebview method.
+    This example uses the showImage method.
     To Test ALTabletService, you need to run the script ON the robot.
     """
     # Get the service ALTabletService.
@@ -19,22 +19,14 @@ def main(session):
     try:
         tabletService = session.service("ALTabletService")
 
-        # Ensure that the tablet wifi is enable
-        tabletService.enableWifi()
-
-        # Display a web page on the tablet
-        tabletService.showWebview("http://www.google.com")
-
-        time.sleep(3)
-
-        # Display a local web page located in boot-config/html folder
+        # Display a local image located in img folder in the root of the web server
         # The ip of the robot from the tablet is 198.18.0.1
-        tabletService.showWebview("http://198.18.0.1/apps/boot-config/preloading_dialog.html")
+        tabletService.showImage("http://198.18.0.1/img/help_charger.png")
 
         time.sleep(3)
 
         # Hide the web view
-        tabletService.hideWebview()
+        tabletService.hideImage()
     except Exception as e:
         print ("Error was: %s", e)
 
