@@ -1,0 +1,16 @@
+topic: ~photo_taking()
+language: mnc
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+concept:(结束) [好了 结束 拍完了 ok 是的 是]
+concept:(继续) [没有 稍等 不 还有一会儿]
+
+u:(~结束) 好的，希望您满意 $done=1
+u:(~继续) 好的 $continue=1

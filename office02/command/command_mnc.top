@@ -1,0 +1,21 @@
+topic: ~command()
+language: mnc
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+concept:(打招呼) [你好 您好 早上好 嗨 Hello]
+concept:(跳舞) [跳个舞吧 你会跳舞吗 你能跳舞吗 给我们跳个舞吧]
+concept:(结束) [再见 拜拜 下次见 明天见]
+concept:(合影) [合个影吧 合影 拍照]
+concept:(会议室) [去会议室 会议室在哪里]
+
+u:(你叫什么名字) 我叫Pepper
+u:(~跳舞) 好的我马上跳舞 $output="dance"
+u:(~合影) 好的让我们一起拍照吧 $output="take_pic"
+u:({pepper}~结束{pepper}) ~结束 我会想你的 $onStopped=1
